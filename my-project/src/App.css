@@ -1,4 +1,154 @@
-h1{
-  color: rgb(73, 73, 127);
-  font-size: 2em;
+.scoreboard-page {
+  align-items: center;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(86, 148, 87, 0.3), transparent 55%),
+    #071b16;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 32px 18px;
+}
+
+.scoreboard {
+  background: #102b22;
+  border: 1px solid rgba(195, 223, 190, 0.14);
+  border-radius: 24px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
+  color: #f5f8ee;
+  max-width: 480px;
+  overflow: hidden;
+  padding: 34px;
+  text-align: center;
+  width: 100%;
+}
+
+.scoreboard-header {
+  margin-bottom: 28px;
+}
+
+.live-indicator {
+  background: rgba(235, 88, 70, 0.14);
+  border: 1px solid rgba(235, 88, 70, 0.35);
+  border-radius: 999px;
+  color: #ff9a83;
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  padding: 7px 12px;
+}
+
+.innings-label {
+  color: #a7c7a8;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin: 22px 0 8px;
+}
+
+.scoreboard-header h1 {
+  color: #f5f8ee;
+  font-size: clamp(1.35rem, 5vw, 1.8rem);
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.score-panel {
+  background: linear-gradient(145deg, #1d4935, #153728);
+  border: 1px solid rgba(198, 226, 190, 0.12);
+  border-radius: 18px;
+  margin-bottom: 22px;
+  padding: 26px 16px 22px;
+}
+
+.team-label,
+.score-caption {
+  color: #bdd2b7;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  margin: 0;
+}
+
+.score-value {
+  color: #f4d879;
+  font-size: clamp(5rem, 20vw, 7rem);
+  font-weight: 800;
+  letter-spacing: -0.07em;
+  line-height: 1;
+  margin: 10px 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.score-controls {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.run-button {
+  align-items: center;
+  border: 0;
+  border-radius: 14px;
+  color: #11251a;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  justify-content: center;
+  min-height: 94px;
+  transition: filter 140ms ease, transform 140ms ease;
+}
+
+.run-button:hover {
+  filter: brightness(1.06);
+  transform: translateY(-2px);
+}
+
+.run-button:active {
+  transform: translateY(0);
+}
+
+.run-button:focus-visible,
+.reset-button:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.four-button {
+  background: #b7d98b;
+}
+
+.six-button {
+  background: #f4d879;
+}
+
+.run-value {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.run-label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.reset-button {
+  background: transparent;
+  border: 0;
+  color: #c3d4c1;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.85rem;
+  margin-top: 20px;
+  padding: 8px 14px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 420px) {
+  .scoreboard {
+    padding: 28px 20px;
+  }
 }

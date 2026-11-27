@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111827" />
+    <title>Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="min-h-screen text-white antialiased">
+    <main class="flex min-h-screen items-center justify-center px-4 py-10">
+      <section class="calculator w-full max-w-sm rounded-[2rem] p-5 sm:p-7" aria-label="Calculator">
+        <header class="mb-8 flex items-center justify-between">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.3em] text-indigo-300">Simple tools</p>
+            <h1 class="mt-1 text-xl font-semibold tracking-tight">Calculator</h1>
+          </div>
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-lg" aria-hidden="true">⌗</span>
+        </header>
+
+        <div class="mb-5 flex min-h-32 flex-col items-end justify-end overflow-hidden rounded-2xl bg-black/20 px-5 py-4 text-right">
+          <p id="previous-display" class="mb-2 min-h-5 max-w-full truncate text-sm text-slate-400" aria-live="polite"></p>
+          <output id="display" class="display-value max-w-full text-5xl font-light tracking-tight" aria-live="assertive" aria-atomic="true">0</output>
+        </div>
+
+        <div class="keypad grid grid-cols-4 gap-3" aria-label="Calculator keys">
+          <button class="key key-utility" type="button" data-action="clear">AC</button>
+          <button class="key key-utility" type="button" data-action="sign" aria-label="Change sign">+/−</button>
+          <button class="key key-utility" type="button" data-action="percent" aria-label="Percent">%</button>
+          <button class="key key-operator" type="button" data-operator="/" aria-label="Divide">÷</button>
+
+          <button class="key" type="button" data-digit="7">7</button>
+          <button class="key" type="button" data-digit="8">8</button>
+          <button class="key" type="button" data-digit="9">9</button>
+          <button class="key key-operator" type="button" data-operator="*" aria-label="Multiply">×</button>
+
+          <button class="key" type="button" data-digit="4">4</button>
+          <button class="key" type="button" data-digit="5">5</button>
+          <button class="key" type="button" data-digit="6">6</button>
+          <button class="key key-operator" type="button" data-operator="-" aria-label="Subtract">−</button>
+
+          <button class="key" type="button" data-digit="1">1</button>
+          <button class="key" type="button" data-digit="2">2</button>
+          <button class="key" type="button" data-digit="3">3</button>
+          <button class="key key-operator" type="button" data-operator="+" aria-label="Add">+</button>
+
+          <button class="key key-zero" type="button" data-digit="0">0</button>
+          <button class="key" type="button" data-action="decimal" aria-label="Decimal point">.</button>
+          <button class="key key-equals" type="button" data-action="equals" aria-label="Equals">=</button>
+        </div>
+
+        <p class="mt-6 text-center text-xs text-slate-500">Use your keyboard or click the keys</p>
+      </section>
+    </main>
+  </body>
+</html>
